@@ -16,7 +16,7 @@
                 <viewController id="Fpd-NI-o5P" customClass="MainViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="yDU-1S-4mq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDz-T3-gss">
                                 <rect key="frame" x="0.0" y="64" width="375" height="1136"/>
@@ -79,19 +79,35 @@
                                                     <action selector="workerButtonTapped:" destination="Fpd-NI-o5P" eventType="touchUpInside" id="CP1-zd-H7p"/>
                                                 </connections>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r2d-Dk-mPU">
+                                                <rect key="frame" x="137.5" y="960" width="100" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="0tQ-ng-ngc"/>
+                                                    <constraint firstAttribute="height" constant="1" id="6PK-1h-NxQ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSt-zh-WgC">
+                                                <rect key="frame" x="164.5" y="1034" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.18431372549019609" green="0.792156862745098" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="r5S-FQ-lP4" firstAttribute="top" secondItem="GtG-Hz-yX5" secondAttribute="bottom" constant="40" id="0Q0-M9-dR9"/>
                                             <constraint firstItem="eri-MQ-GMh" firstAttribute="centerX" secondItem="TYM-d2-5ux" secondAttribute="centerX" id="5JF-v5-QaV"/>
+                                            <constraint firstAttribute="bottom" secondItem="QSt-zh-WgC" secondAttribute="bottom" constant="136" id="7Z9-ys-3tL"/>
                                             <constraint firstItem="wcQ-94-yAO" firstAttribute="top" secondItem="r5S-FQ-lP4" secondAttribute="bottom" constant="40" id="9BO-7N-uxb"/>
                                             <constraint firstItem="uNR-Z9-tjp" firstAttribute="top" secondItem="TYM-d2-5ux" secondAttribute="top" constant="10" id="Lb5-NI-gE1"/>
+                                            <constraint firstItem="QSt-zh-WgC" firstAttribute="top" secondItem="TYM-d2-5ux" secondAttribute="top" constant="1034" id="RBs-kK-r4P"/>
+                                            <constraint firstItem="eri-MQ-GMh" firstAttribute="top" secondItem="wcQ-94-yAO" secondAttribute="bottom" constant="40" id="U6u-6h-7xn"/>
                                             <constraint firstItem="wcQ-94-yAO" firstAttribute="centerX" secondItem="TYM-d2-5ux" secondAttribute="centerX" id="VLQ-pK-Dzh"/>
                                             <constraint firstItem="GtG-Hz-yX5" firstAttribute="top" secondItem="uNR-Z9-tjp" secondAttribute="bottom" constant="40" id="Vgu-Wc-0HE"/>
                                             <constraint firstItem="r5S-FQ-lP4" firstAttribute="centerX" secondItem="TYM-d2-5ux" secondAttribute="centerX" id="WBP-IQ-bnE"/>
+                                            <constraint firstItem="r2d-Dk-mPU" firstAttribute="centerX" secondItem="TYM-d2-5ux" secondAttribute="centerX" id="XwR-Pr-JeR"/>
                                             <constraint firstItem="uNR-Z9-tjp" firstAttribute="centerX" secondItem="TYM-d2-5ux" secondAttribute="centerX" id="b9W-ta-eFe"/>
                                             <constraint firstItem="GtG-Hz-yX5" firstAttribute="centerX" secondItem="TYM-d2-5ux" secondAttribute="centerX" id="oBO-iA-GN2"/>
-                                            <constraint firstItem="eri-MQ-GMh" firstAttribute="top" secondItem="wcQ-94-yAO" secondAttribute="bottom" constant="40" id="sIY-Vo-BJV"/>
+                                            <constraint firstItem="QSt-zh-WgC" firstAttribute="centerX" secondItem="TYM-d2-5ux" secondAttribute="centerX" id="ojS-V0-vAC"/>
+                                            <constraint firstItem="r2d-Dk-mPU" firstAttribute="top" secondItem="eri-MQ-GMh" secondAttribute="bottom" constant="40" id="onA-pw-K1h"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -108,7 +124,7 @@
                         <constraints>
                             <constraint firstItem="BDz-T3-gss" firstAttribute="leading" secondItem="jN5-ca-CCC" secondAttribute="leading" id="1sO-2e-6oS"/>
                             <constraint firstItem="BDz-T3-gss" firstAttribute="trailing" secondItem="jN5-ca-CCC" secondAttribute="trailing" id="4Gu-D0-ocm"/>
-                            <constraint firstItem="TYM-d2-5ux" firstAttribute="height" secondItem="yDU-1S-4mq" secondAttribute="height" id="BOd-ij-5dT"/>
+                            <constraint firstAttribute="height" secondItem="TYM-d2-5ux" secondAttribute="height" priority="250" id="BOd-ij-5dT"/>
                             <constraint firstItem="BDz-T3-gss" firstAttribute="top" secondItem="jN5-ca-CCC" secondAttribute="top" id="MUn-xs-zr0"/>
                             <constraint firstItem="BDz-T3-gss" firstAttribute="bottom" secondItem="jN5-ca-CCC" secondAttribute="bottom" id="uLm-mx-I0u"/>
                         </constraints>
@@ -119,10 +135,13 @@
                     <connections>
                         <outlet property="babyButtonCenterConstraint" destination="b9W-ta-eFe" id="GF3-PK-fBW"/>
                         <outlet property="babyButtonOutlet" destination="uNR-Z9-tjp" id="bp9-3f-Fza"/>
+                        <outlet property="certificateButtonCenterConstraint" destination="VLQ-pK-Dzh" id="S7B-iI-4nE"/>
                         <outlet property="certificateButtonOutlet" destination="wcQ-94-yAO" id="ChP-be-UoK"/>
                         <outlet property="certificateButtonUpConstraint" destination="9BO-7N-uxb" id="l09-VO-0F0"/>
                         <outlet property="schoolBusButtonOutlet" destination="GtG-Hz-yX5" id="oIa-Pw-rpd"/>
                         <outlet property="schoolBusCenterConstraint" destination="oBO-iA-GN2" id="8AG-rA-9Hf"/>
+                        <outlet property="scrollViewOutlet" destination="BDz-T3-gss" id="mg7-km-04w"/>
+                        <outlet property="universityButtonCenterConstraint" destination="WBP-IQ-bnE" id="hIh-q0-c7I"/>
                         <outlet property="universityButtonOutlet" destination="r5S-FQ-lP4" id="xcZ-xC-VhP"/>
                         <outlet property="universityButtonUpConstraint" destination="0Q0-M9-dR9" id="RGL-fu-xwy"/>
                         <outlet property="workerButtonCenterConstraint" destination="5JF-v5-QaV" id="Nat-Qo-jcN"/>
@@ -131,7 +150,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7G2-YN-QpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="-170.46476761619192"/>
+            <point key="canvasLocation" x="956" y="89"/>
+        </scene>
+        <!--Baby Pop Up View Controller-->
+        <scene sceneID="YXp-H6-qqB">
+            <objects>
+                <viewController storyboardIdentifier="babyPopUp" id="wFn-Zz-Brg" customClass="BabyPopUpViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q6r-m0-3cp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgO-Vn-jVv">
+                                <rect key="frame" x="67.5" y="130" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWc-my-CS4">
+                                        <rect key="frame" x="60" y="180" width="120" height="40"/>
+                                        <color key="backgroundColor" red="0.1843137255" green="0.79215686269999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WWc-my-CS4" secondAttribute="height" multiplier="3:1" id="Fmu-B6-SQb"/>
+                                            <constraint firstAttribute="height" constant="40" id="UTa-KN-qhk"/>
+                                        </constraints>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="wFn-Zz-Brg" eventType="touchUpInside" id="WtI-ki-jeM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WWc-my-CS4" secondAttribute="bottom" constant="20" id="7b1-UI-rTd"/>
+                                    <constraint firstItem="WWc-my-CS4" firstAttribute="centerX" secondItem="UgO-Vn-jVv" secondAttribute="centerX" id="QJk-SL-O2x"/>
+                                    <constraint firstAttribute="width" constant="240" id="RRp-dG-Vvc"/>
+                                    <constraint firstAttribute="height" constant="240" id="eR2-1D-9aj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="UgO-Vn-jVv" firstAttribute="centerY" secondItem="Q6r-m0-3cp" secondAttribute="centerY" id="6pa-uR-xal"/>
+                            <constraint firstItem="UgO-Vn-jVv" firstAttribute="centerX" secondItem="Q6r-m0-3cp" secondAttribute="centerX" id="KQP-9t-iqQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aPB-2f-4Vo"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0S-2A-Kdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="-227"/>
+        </scene>
+        <!--School Bus Pop Up View Controller-->
+        <scene sceneID="DFz-sU-b2M">
+            <objects>
+                <viewController storyboardIdentifier="schoolBussPopUp" id="48z-P2-bsQ" customClass="SchoolBusPopUpViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6bZ-gC-t5N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uys-xb-iph">
+                                <rect key="frame" x="67.5" y="130" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaq-Hn-wyf">
+                                        <rect key="frame" x="96.5" y="105" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="48z-P2-bsQ" eventType="touchUpInside" id="nHa-5v-3Wd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99628287553787231" green="0.86105519533157349" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="ais-OL-HPh"/>
+                                    <constraint firstAttribute="width" constant="240" id="kr6-Uq-T1n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Uys-xb-iph" firstAttribute="centerX" secondItem="6bZ-gC-t5N" secondAttribute="centerX" id="gJy-8A-QmP"/>
+                            <constraint firstItem="Uys-xb-iph" firstAttribute="centerY" secondItem="6bZ-gC-t5N" secondAttribute="centerY" id="heV-2b-ZD9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Vg-E8-kkk"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTz-gm-64i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2386" y="-228"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AQO-Fo-kpj">
@@ -155,12 +258,131 @@
             </objects>
             <point key="canvasLocation" x="104.8" y="-170.46476761619192"/>
         </scene>
+        <!--University Pop Up View Controller-->
+        <scene sceneID="y5v-u9-HI2">
+            <objects>
+                <viewController storyboardIdentifier="universityPopUp" id="aD0-ZI-x7C" customClass="UniversityPopUpViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rTr-aZ-p9g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-dQ-xSJ">
+                                <rect key="frame" x="67.5" y="130" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92r-99-cjc">
+                                        <rect key="frame" x="96.5" y="105" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="aD0-ZI-x7C" eventType="touchUpInside" id="hWK-OC-DhV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="89f-S8-MHp"/>
+                                    <constraint firstAttribute="width" constant="240" id="dEK-0L-AeB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="7ad-dQ-xSJ" firstAttribute="centerY" secondItem="rTr-aZ-p9g" secondAttribute="centerY" id="ogv-fm-AUa"/>
+                            <constraint firstItem="7ad-dQ-xSJ" firstAttribute="centerX" secondItem="rTr-aZ-p9g" secondAttribute="centerX" id="sN8-AC-r15"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SlX-hQ-9ss"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Sg-G9-B4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="312"/>
+        </scene>
+        <!--Certificate Pop Up View Controller-->
+        <scene sceneID="Uii-FY-CUa">
+            <objects>
+                <viewController storyboardIdentifier="certificatePopUp" id="IAx-sk-7xx" customClass="CertificatePopUpViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y5K-hM-ILr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rg5-jz-dn3">
+                                <rect key="frame" x="67.5" y="130" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktm-w5-BOl">
+                                        <rect key="frame" x="137" y="85" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="IAx-sk-7xx" eventType="touchUpInside" id="8Dw-Il-m42"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="6M8-4c-cpe"/>
+                                    <constraint firstAttribute="height" constant="240" id="L5C-pB-Lfq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Rg5-jz-dn3" firstAttribute="centerY" secondItem="Y5K-hM-ILr" secondAttribute="centerY" id="WiW-9Z-vvN"/>
+                            <constraint firstItem="Rg5-jz-dn3" firstAttribute="centerX" secondItem="Y5K-hM-ILr" secondAttribute="centerX" id="Zf6-7V-cnn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TZf-ep-FCu"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOM-uP-X0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2414" y="311"/>
+        </scene>
+        <!--Worker Pop Up View Controller-->
+        <scene sceneID="Idg-Sn-sDM">
+            <objects>
+                <viewController storyboardIdentifier="workerPopUp" id="eGe-Go-dJ1" customClass="WorkerPopUpViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Pv-Yt-sWC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFC-jg-bgs">
+                                <rect key="frame" x="67.5" y="130" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9B-py-26e">
+                                        <rect key="frame" x="96.5" y="105" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="eGe-Go-dJ1" eventType="touchUpInside" id="ccd-sB-l0e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="cff-cV-KiT"/>
+                                    <constraint firstAttribute="width" constant="240" id="lYP-tm-ies"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mFC-jg-bgs" firstAttribute="centerX" secondItem="0Pv-Yt-sWC" secondAttribute="centerX" id="72S-Z2-UiH"/>
+                            <constraint firstItem="mFC-jg-bgs" firstAttribute="centerY" secondItem="0Pv-Yt-sWC" secondAttribute="centerY" id="edr-de-1iV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cpt-EW-edm"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgY-gM-FEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3135" y="-228"/>
+        </scene>
     </scenes>
     <resources>
         <image name="baby_stroller" width="230" height="217"/>
-        <image name="certificate" width="2735" height="2010.5"/>
+        <image name="certificate" width="597.5" height="462"/>
         <image name="school_bus" width="250" height="250"/>
         <image name="university" width="400" height="400"/>
-        <image name="worker" width="370" height="370"/>
+        <image name="worker" width="370" height="355"/>
     </resources>
 </document>

@@ -12,6 +12,13 @@
 		5C8CC4AE22B11F7100DB224B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8CC4AD22B11F7100DB224B /* Assets.xcassets */; };
 		5C8CC4B122B11F7100DB224B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8CC4AF22B11F7100DB224B /* LaunchScreen.storyboard */; };
 		5C8CC4BF22B16C3200DB224B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4BE22B16C3200DB224B /* MainViewController.swift */; };
+		5C8CC4C122B3AB2700DB224B /* BabyPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4C022B3AB2700DB224B /* BabyPopUpViewController.swift */; };
+		5C8CC4C322B3B2FE00DB224B /* SchoolBusPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4C222B3B2FE00DB224B /* SchoolBusPopUpViewController.swift */; };
+		5C8CC4C522B3BAB100DB224B /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4C422B3BAB100DB224B /* Controller.swift */; };
+		5C8CC4C922B3C6EC00DB224B /* UniversityPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4C822B3C6EC00DB224B /* UniversityPopUpViewController.swift */; };
+		5C8CC4CB22B3C73D00DB224B /* CertificatePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4CA22B3C73D00DB224B /* CertificatePopUpViewController.swift */; };
+		5C8CC4CD22B3C79A00DB224B /* WorkerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4CC22B3C79A00DB224B /* WorkerPopUpViewController.swift */; };
+		5C8CC4D022B3FEF700DB224B /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4CF22B3FEF700DB224B /* Direction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		5C8CC4B022B11F7100DB224B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C8CC4B222B11F7100DB224B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8CC4BE22B16C3200DB224B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5C8CC4C022B3AB2700DB224B /* BabyPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyPopUpViewController.swift; sourceTree = "<group>"; };
+		5C8CC4C222B3B2FE00DB224B /* SchoolBusPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusPopUpViewController.swift; sourceTree = "<group>"; };
+		5C8CC4C422B3BAB100DB224B /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		5C8CC4C822B3C6EC00DB224B /* UniversityPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityPopUpViewController.swift; sourceTree = "<group>"; };
+		5C8CC4CA22B3C73D00DB224B /* CertificatePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatePopUpViewController.swift; sourceTree = "<group>"; };
+		5C8CC4CC22B3C79A00DB224B /* WorkerPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerPopUpViewController.swift; sourceTree = "<group>"; };
+		5C8CC4CF22B3FEF700DB224B /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +69,28 @@
 			isa = PBXGroup;
 			children = (
 				5C8CC4A622B11F6900DB224B /* AppDelegate.swift */,
-				5C8CC4BE22B16C3200DB224B /* MainViewController.swift */,
+				5C8CC4CE22B3C7C600DB224B /* Controllers */,
 				5C8CC4AA22B11F6900DB224B /* Main.storyboard */,
 				5C8CC4AD22B11F7100DB224B /* Assets.xcassets */,
 				5C8CC4AF22B11F7100DB224B /* LaunchScreen.storyboard */,
 				5C8CC4B222B11F7100DB224B /* Info.plist */,
+				5C8CC4C422B3BAB100DB224B /* Controller.swift */,
+				5C8CC4CF22B3FEF700DB224B /* Direction.swift */,
 			);
 			path = MyCV;
+			sourceTree = "<group>";
+		};
+		5C8CC4CE22B3C7C600DB224B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C8CC4BE22B16C3200DB224B /* MainViewController.swift */,
+				5C8CC4C022B3AB2700DB224B /* BabyPopUpViewController.swift */,
+				5C8CC4C222B3B2FE00DB224B /* SchoolBusPopUpViewController.swift */,
+				5C8CC4C822B3C6EC00DB224B /* UniversityPopUpViewController.swift */,
+				5C8CC4CA22B3C73D00DB224B /* CertificatePopUpViewController.swift */,
+				5C8CC4CC22B3C79A00DB224B /* WorkerPopUpViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C8CC4A722B11F6900DB224B /* AppDelegate.swift in Sources */,
+				5C8CC4C522B3BAB100DB224B /* Controller.swift in Sources */,
+				5C8CC4C122B3AB2700DB224B /* BabyPopUpViewController.swift in Sources */,
+				5C8CC4CB22B3C73D00DB224B /* CertificatePopUpViewController.swift in Sources */,
+				5C8CC4C322B3B2FE00DB224B /* SchoolBusPopUpViewController.swift in Sources */,
 				5C8CC4BF22B16C3200DB224B /* MainViewController.swift in Sources */,
+				5C8CC4C922B3C6EC00DB224B /* UniversityPopUpViewController.swift in Sources */,
+				5C8CC4CD22B3C79A00DB224B /* WorkerPopUpViewController.swift in Sources */,
+				5C8CC4D022B3FEF700DB224B /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
