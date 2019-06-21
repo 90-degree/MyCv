@@ -181,7 +181,7 @@ class MainViewController: UIViewController {
     func slide(toButton: UIButton) {
         var point = toButton.frame.origin
         point.x += toButton.frame.width/2 - view.frame.width/2
-        point.y -= CGFloat(260)
+        point.y -= CGFloat(view.bounds.height/1.9)
         scrollViewOutlet.setContentOffset(point, animated: true)
     }
 }

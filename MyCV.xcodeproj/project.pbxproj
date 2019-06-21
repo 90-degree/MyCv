@@ -84,11 +84,8 @@
 				5C8CC4D322B7F9CF00DB224B /* Main.storyboard */,
 				5C8CC4AF22B11F7100DB224B /* LaunchScreen.storyboard */,
 				5C8CC4B222B11F7100DB224B /* Info.plist */,
-				5C8CC4C422B3BAB100DB224B /* Controller.swift */,
-				5C8CC4CF22B3FEF700DB224B /* Direction.swift */,
-				5C8CC4D722B9100200DB224B /* PersonalInformations.swift */,
+				5C8CC4FB22BCDA4A00DB224B /* Model */,
 				5C8CC4D922B9436E00DB224B /* Pulsing.swift */,
-				5C8CC4F922BC10D000DB224B /* Contacts.swift */,
 			);
 			path = MyCV;
 			sourceTree = "<group>";
@@ -106,6 +103,17 @@
 				5C8CC4D522B8E9D800DB224B /* ContactsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5C8CC4FB22BCDA4A00DB224B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C8CC4C422B3BAB100DB224B /* Controller.swift */,
+				5C8CC4CF22B3FEF700DB224B /* Direction.swift */,
+				5C8CC4D722B9100200DB224B /* PersonalInformations.swift */,
+				5C8CC4F922BC10D000DB224B /* Contacts.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

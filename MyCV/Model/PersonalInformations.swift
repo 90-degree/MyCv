@@ -11,7 +11,7 @@ import Foundation
 
 struct PersonalInformations {
     
-    static let birthDay = "Aleksandar Šajatović was born on June 19th, 1985 year in Novi Sad"
+    static let birthDay = "Aleksandar Šajatović was born on June 19th, 1985 in Novi Sad"
     static let elementarySchool = "He finished elementary school \"Jovan Jovanović Zmaj\" in Sremska Kamenica"
     static let highSchool = "And after that Electrotechnical high school \"Mihajlo Pupin\" in Novi Sad"
     static let faculty = "Aleksandar has finished the Faculty of Sport and Physical Education at Novi Sad's University, with a specialization in Sport Management."
