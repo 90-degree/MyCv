@@ -9,11 +9,36 @@
 import UIKit
 
 class SchoolBusPopUpViewController: UIViewController {
+    
+    @IBOutlet weak var elementarySchoolLabel: UILabel!
+    @IBOutlet weak var middleSchoolLabel: UILabel!
+    
+    @IBOutlet weak var elementarySchoolUpConstraint: NSLayoutConstraint!
+    @IBOutlet weak var middleSchoolUpConstraint: NSLayoutConstraint!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        elementarySchoolLabel.text = PersonalInformations.elementarySchool
+        middleSchoolLabel.text = PersonalInformations.highSchool
+        
+        elementarySchoolUpConstraint.constant += view.bounds.height
+        middleSchoolUpConstraint.constant += view.bounds.height
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 1.4, delay: 0, options: .curveEaseInOut, animations: {
+            self.elementarySchoolUpConstraint.constant -= self.view.bounds.height
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseInOut, animations: {
+            self.middleSchoolUpConstraint.constant -= self.view.bounds.height
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
     }
     
 

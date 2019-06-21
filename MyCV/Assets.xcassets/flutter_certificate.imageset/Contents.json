@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "certificate-of-completion-for-the-complete-flutter-development-bootcamp-using-dart.pdf",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "certificate-of-completion-for-the-complete-flutter-development-bootcamp-using-dart-1.pdf",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "certificate-of-completion-for-the-complete-flutter-development-bootcamp-using-dart-2.pdf",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

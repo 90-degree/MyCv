@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C8CC4A722B11F6900DB224B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4A622B11F6900DB224B /* AppDelegate.swift */; };
-		5C8CC4AC22B11F6900DB224B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8CC4AA22B11F6900DB224B /* Main.storyboard */; };
 		5C8CC4AE22B11F7100DB224B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8CC4AD22B11F7100DB224B /* Assets.xcassets */; };
 		5C8CC4B122B11F7100DB224B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8CC4AF22B11F7100DB224B /* LaunchScreen.storyboard */; };
 		5C8CC4BF22B16C3200DB224B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4BE22B16C3200DB224B /* MainViewController.swift */; };
@@ -19,12 +18,17 @@
 		5C8CC4CB22B3C73D00DB224B /* CertificatePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4CA22B3C73D00DB224B /* CertificatePopUpViewController.swift */; };
 		5C8CC4CD22B3C79A00DB224B /* WorkerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4CC22B3C79A00DB224B /* WorkerPopUpViewController.swift */; };
 		5C8CC4D022B3FEF700DB224B /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4CF22B3FEF700DB224B /* Direction.swift */; };
+		5C8CC4D222B5872600DB224B /* MotivationPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4D122B5872600DB224B /* MotivationPopUpViewController.swift */; };
+		5C8CC4D422B7F9CF00DB224B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8CC4D322B7F9CF00DB224B /* Main.storyboard */; };
+		5C8CC4D622B8E9D800DB224B /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4D522B8E9D800DB224B /* ContactsViewController.swift */; };
+		5C8CC4D822B9100200DB224B /* PersonalInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4D722B9100200DB224B /* PersonalInformations.swift */; };
+		5C8CC4DA22B9436E00DB224B /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4D922B9436E00DB224B /* Pulsing.swift */; };
+		5C8CC4FA22BC10D100DB224B /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8CC4F922BC10D000DB224B /* Contacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C8CC4A322B11F6900DB224B /* MyCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8CC4A622B11F6900DB224B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C8CC4AB22B11F6900DB224B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C8CC4AD22B11F7100DB224B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C8CC4B022B11F7100DB224B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C8CC4B222B11F7100DB224B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +40,12 @@
 		5C8CC4CA22B3C73D00DB224B /* CertificatePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatePopUpViewController.swift; sourceTree = "<group>"; };
 		5C8CC4CC22B3C79A00DB224B /* WorkerPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerPopUpViewController.swift; sourceTree = "<group>"; };
 		5C8CC4CF22B3FEF700DB224B /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		5C8CC4D122B5872600DB224B /* MotivationPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationPopUpViewController.swift; sourceTree = "<group>"; };
+		5C8CC4D322B7F9CF00DB224B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5C8CC4D522B8E9D800DB224B /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		5C8CC4D722B9100200DB224B /* PersonalInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformations.swift; sourceTree = "<group>"; };
+		5C8CC4D922B9436E00DB224B /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
+		5C8CC4F922BC10D000DB224B /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +80,15 @@
 			children = (
 				5C8CC4A622B11F6900DB224B /* AppDelegate.swift */,
 				5C8CC4CE22B3C7C600DB224B /* Controllers */,
-				5C8CC4AA22B11F6900DB224B /* Main.storyboard */,
 				5C8CC4AD22B11F7100DB224B /* Assets.xcassets */,
+				5C8CC4D322B7F9CF00DB224B /* Main.storyboard */,
 				5C8CC4AF22B11F7100DB224B /* LaunchScreen.storyboard */,
 				5C8CC4B222B11F7100DB224B /* Info.plist */,
 				5C8CC4C422B3BAB100DB224B /* Controller.swift */,
 				5C8CC4CF22B3FEF700DB224B /* Direction.swift */,
+				5C8CC4D722B9100200DB224B /* PersonalInformations.swift */,
+				5C8CC4D922B9436E00DB224B /* Pulsing.swift */,
+				5C8CC4F922BC10D000DB224B /* Contacts.swift */,
 			);
 			path = MyCV;
 			sourceTree = "<group>";
@@ -89,6 +102,8 @@
 				5C8CC4C822B3C6EC00DB224B /* UniversityPopUpViewController.swift */,
 				5C8CC4CA22B3C73D00DB224B /* CertificatePopUpViewController.swift */,
 				5C8CC4CC22B3C79A00DB224B /* WorkerPopUpViewController.swift */,
+				5C8CC4D122B5872600DB224B /* MotivationPopUpViewController.swift */,
+				5C8CC4D522B8E9D800DB224B /* ContactsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -151,9 +166,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8CC4D422B7F9CF00DB224B /* Main.storyboard in Resources */,
 				5C8CC4B122B11F7100DB224B /* LaunchScreen.storyboard in Resources */,
 				5C8CC4AE22B11F7100DB224B /* Assets.xcassets in Resources */,
-				5C8CC4AC22B11F6900DB224B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,13 +179,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8CC4DA22B9436E00DB224B /* Pulsing.swift in Sources */,
 				5C8CC4A722B11F6900DB224B /* AppDelegate.swift in Sources */,
+				5C8CC4D622B8E9D800DB224B /* ContactsViewController.swift in Sources */,
 				5C8CC4C522B3BAB100DB224B /* Controller.swift in Sources */,
 				5C8CC4C122B3AB2700DB224B /* BabyPopUpViewController.swift in Sources */,
 				5C8CC4CB22B3C73D00DB224B /* CertificatePopUpViewController.swift in Sources */,
+				5C8CC4FA22BC10D100DB224B /* Contacts.swift in Sources */,
 				5C8CC4C322B3B2FE00DB224B /* SchoolBusPopUpViewController.swift in Sources */,
 				5C8CC4BF22B16C3200DB224B /* MainViewController.swift in Sources */,
 				5C8CC4C922B3C6EC00DB224B /* UniversityPopUpViewController.swift in Sources */,
+				5C8CC4D822B9100200DB224B /* PersonalInformations.swift in Sources */,
+				5C8CC4D222B5872600DB224B /* MotivationPopUpViewController.swift in Sources */,
 				5C8CC4CD22B3C79A00DB224B /* WorkerPopUpViewController.swift in Sources */,
 				5C8CC4D022B3FEF700DB224B /* Direction.swift in Sources */,
 			);
@@ -179,14 +199,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5C8CC4AA22B11F6900DB224B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C8CC4AB22B11F6900DB224B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C8CC4AF22B11F7100DB224B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

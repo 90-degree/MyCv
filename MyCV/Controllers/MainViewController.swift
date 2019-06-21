@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var babyButtonOutlet: UIButton!
     @IBOutlet weak var babyButtonCenterConstraint: NSLayoutConstraint!
     
+    
     @IBOutlet weak var schoolBusButtonOutlet: UIButton!
     @IBOutlet weak var schoolBusCenterConstraint: NSLayoutConstraint!
     
@@ -32,12 +33,22 @@ class MainViewController: UIViewController {
     @IBOutlet weak var workerButtonOutlet: UIButton!
     @IBOutlet weak var workerButtonCenterConstraint: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var motivationButtonOutlet: UIButton!
+    @IBOutlet weak var motivationButtonCenterConstraint: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var contactsButtonOutlet: UIButton!
+    @IBOutlet weak var contactsButtonCenterConstraint: NSLayoutConstraint!
+    
+    
     var babyAnimationDone = false
     var schoolBusAnimationDone = false
     var universityAnimationDone = false
     var certificateAnimationDone = false
     var workerAnimationDone = false
-    
+    var motivationAnimationDone = false
+    var contactsAnimationDone = false
     
     
     override func viewDidLoad() {
@@ -48,8 +59,11 @@ class MainViewController: UIViewController {
         universityButtonCenterConstraint.constant += view.bounds.width
         certificateButtonCenterConstraint.constant -= view.bounds.width
         workerButtonCenterConstraint.constant += view.bounds.width
+        motivationButtonCenterConstraint.constant -= view.bounds.width
+        contactsButtonCenterConstraint.constant += view.bounds.width
 
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.nextAnimation), name: NSNotification.Name(rawValue: "popUpViewDissmised"), object: nil)
+        
         
     }
     
@@ -60,13 +74,13 @@ class MainViewController: UIViewController {
     
 
     @IBAction func babyButtonTapped(_ sender: UIButton) {
+        
         getPopUp(asViewController: .baby)
     }
     
     @IBAction func schoolBusButtonTapped(_ sender: UIButton) {
         
         getPopUp(asViewController: .schoolBus)
-
     }
     
     @IBAction func universityButtonTapped(_ sender: UIButton) {
@@ -77,13 +91,20 @@ class MainViewController: UIViewController {
     @IBAction func certificateButtonTapped(_ sender: UIButton) {
         
         getPopUp(asViewController: .certificate)
-        
-        
-        
     }
     
     @IBAction func workerButtonTapped(_ sender: UIButton) {
         getPopUp(asViewController: .worker)
+    }
+    
+    @IBAction func motivationButtonTapped(_ sender: UIButton) {
+        getPopUp(asViewController: .motivation)
+    }
+    
+    
+    @IBAction func contactsButtonTapped(_ sender: UIButton) {
+        
+        getPopUp(asViewController: .contacts)
     }
     
     
@@ -93,15 +114,19 @@ class MainViewController: UIViewController {
         
         switch vc {
         case .baby:
-            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Controller.baby.rawValue) as! BabyPopUpViewController
+            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vc.rawValue) as! BabyPopUpViewController
         case .schoolBus:
-            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Controller.schoolBus.rawValue) as! SchoolBusPopUpViewController
+            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vc.rawValue) as! SchoolBusPopUpViewController
         case .university:
-            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Controller.university.rawValue) as! UniversityPopUpViewController
+            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vc.rawValue) as! UniversityPopUpViewController
         case .certificate:
-            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Controller.certificate.rawValue) as! CertificatePopUpViewController
+            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vc.rawValue) as! CertificatePopUpViewController
         case .worker:
-            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Controller.worker.rawValue) as! WorkerPopUpViewController
+            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vc.rawValue) as! WorkerPopUpViewController
+        case .motivation:
+            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vc.rawValue) as! MotivationPopUpViewController
+        case .contacts:
+            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vc.rawValue) as! ContactsViewController
         }
         
         if let popUpVC = controller {
@@ -109,7 +134,6 @@ class MainViewController: UIViewController {
             popUpVC.view.frame = self.view.frame
             self.view.addSubview(popUpVC.view)
             popUpVC.didMove(toParent: self)
-            
         }
     }
     
@@ -131,7 +155,7 @@ class MainViewController: UIViewController {
             switch info {
             case .baby:
                 schoolBusAnimationDone = buttonAnimation(forButtonConstraint: schoolBusCenterConstraint, direction: .fromLeft, isDone: schoolBusAnimationDone)
-                slide(toButton: schoolBusButtonOutlet)
+                //slide(toButton: schoolBusButtonOutlet)
             case .schoolBus:
                 universityAnimationDone = buttonAnimation(forButtonConstraint: universityButtonCenterConstraint, direction: .fromRight, isDone: universityAnimationDone)
                 slide(toButton: universityButtonOutlet)
@@ -142,7 +166,13 @@ class MainViewController: UIViewController {
                 workerAnimationDone = buttonAnimation(forButtonConstraint: workerButtonCenterConstraint, direction: .fromRight, isDone: workerAnimationDone)
                 slide(toButton: workerButtonOutlet)
             case .worker:
-                print("worker")
+                motivationAnimationDone = buttonAnimation(forButtonConstraint: motivationButtonCenterConstraint, direction: .fromLeft, isDone: motivationAnimationDone)
+                slide(toButton: motivationButtonOutlet)
+            case .motivation:
+                contactsAnimationDone = buttonAnimation(forButtonConstraint: contactsButtonCenterConstraint, direction: .fromRight, isDone: contactsAnimationDone)
+                slide(toButton: contactsButtonOutlet)
+            case .contacts:
+                print("contacts")
             }
         }
     }
@@ -151,7 +181,7 @@ class MainViewController: UIViewController {
     func slide(toButton: UIButton) {
         var point = toButton.frame.origin
         point.x += toButton.frame.width/2 - view.frame.width/2
-        point.y -= CGFloat(200)
+        point.y -= CGFloat(260)
         scrollViewOutlet.setContentOffset(point, animated: true)
     }
 }

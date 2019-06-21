@@ -14,4 +14,6 @@ enum Controller: String {
     case university = "universityPopUp"
     case certificate = "certificatePopUp"
     case worker = "workerPopUp"
+    case motivation = "motivationPopUp"
+    case contacts = "contactsPopUp"
 }
