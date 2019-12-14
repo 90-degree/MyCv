@@ -59,8 +59,9 @@ class MainViewController: UIViewController {
         universityButtonCenterConstraint.constant += view.bounds.width
         certificateButtonCenterConstraint.constant -= view.bounds.width
         workerButtonCenterConstraint.constant += view.bounds.width
-        motivationButtonCenterConstraint.constant -= view.bounds.width
-        contactsButtonCenterConstraint.constant += view.bounds.width
+        contactsButtonCenterConstraint.constant -= view.bounds.width
+        motivationButtonCenterConstraint.constant += view.bounds.width
+        
 
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.nextAnimation), name: NSNotification.Name(rawValue: "popUpViewDissmised"), object: nil)
         
@@ -166,12 +167,12 @@ class MainViewController: UIViewController {
                 workerAnimationDone = buttonAnimation(forButtonConstraint: workerButtonCenterConstraint, direction: .fromRight, isDone: workerAnimationDone)
                 slide(toButton: workerButtonOutlet)
             case .worker:
-                motivationAnimationDone = buttonAnimation(forButtonConstraint: motivationButtonCenterConstraint, direction: .fromLeft, isDone: motivationAnimationDone)
-                slide(toButton: motivationButtonOutlet)
-            case .motivation:
-                contactsAnimationDone = buttonAnimation(forButtonConstraint: contactsButtonCenterConstraint, direction: .fromRight, isDone: contactsAnimationDone)
+                contactsAnimationDone = buttonAnimation(forButtonConstraint: contactsButtonCenterConstraint, direction: .fromLeft, isDone: contactsAnimationDone)
                 slide(toButton: contactsButtonOutlet)
             case .contacts:
+                motivationAnimationDone = buttonAnimation(forButtonConstraint: motivationButtonCenterConstraint, direction: .fromRight, isDone: motivationAnimationDone)
+                slide(toButton: motivationButtonOutlet)
+            case .motivation:
                 print("contacts")
             }
         }

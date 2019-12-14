@@ -25,7 +25,7 @@ struct PersonalInformations {
     ]
     
     private let jobPosition = [
-        2019:"Sport Manager",
+        2019:"iOS Developer",
         2018:"Sport Manager",
         2017:"Sport Manager",
         2016:"Lead Instructor",
@@ -33,14 +33,14 @@ struct PersonalInformations {
         2014:"Instructor",
         2013:"Instructor",
         2012:"Instructor",
-        2011:"Rope Access Worker",
-        2010:"Rope Access Worker",
-        2009:"Rope Access Worker",
-        2008:"Rope Access Worker",
-        2007:"Rope Access Worker",
+        2011:"Rope Access",
+        2010:"Rope Access",
+        2009:"Rope Access",
+        2008:"Rope Access",
+        2007:"Rope Access",
     ]
     private let employer = [
-        2019:"\"Adrenalin\" climbing club.",
+        2019:"Freelace",
         2018:"\"Adrenalin\" climbing club.",
         2017:"\"Adrenalin\" climbing club.",
         2016:"\"Adrenalin\" climbing club.",

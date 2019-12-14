@@ -32,9 +32,9 @@ class MotivationPopUpViewController: UIViewController {
     @IBOutlet weak var nextButtonCenterConstraint: NSLayoutConstraint!
     
     
-    let maskView = UIView(frame: CGRect(x: 160, y: 40, width: 80, height: 80))
+    //let maskView = UIView(frame: CGRect(x: 160, y: 40, width: 80, height: 80))
     
-    let scaleFactor:CGFloat = 5.2
+    let scaleFactor:CGFloat = 1.8
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,41 +42,46 @@ class MotivationPopUpViewController: UIViewController {
         
         view.backgroundColor = UIColor.black.withAlphaComponent(1.0)
         motivationTextLabel1.text = PersonalInformations.motivation[0]
-        motivationTextLabelCenterConstraint1.constant += view.bounds.height
-        motivationTextLabel1.transform = CGAffineTransform(scaleX: 2, y: 2)
+        motivationTextLabelCenterConstraint1.constant += view.bounds.height/1.5
+        motivationTextLabel1.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
         
         motivationTextLabel2.text = PersonalInformations.motivation[1]
-        motivationTextLabelCenterConstraint2.constant += view.bounds.height
-        motivationTextLabel2.transform = CGAffineTransform(scaleX: 2, y: 2)
+        motivationTextLabelCenterConstraint2.constant += view.bounds.height/1.5
+        motivationTextLabel2.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
         
         motivationTextLabel3.text = PersonalInformations.motivation[2]
-        motivationTextLabelCenterConstraint3.constant += view.bounds.height
-        motivationTextLabel3.transform = CGAffineTransform(scaleX: 2, y: 2)
+        motivationTextLabelCenterConstraint3.constant += view.bounds.height/1.5
+        motivationTextLabel3.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
         
         motivationTextLabel4.text = PersonalInformations.motivation[3]
-        motivationTextLabelCenterConstraint4.constant += view.bounds.height
-        motivationTextLabel4.transform = CGAffineTransform(scaleX: 2, y: 2)
+        motivationTextLabelCenterConstraint4.constant += view.bounds.height/1.5
+        motivationTextLabel4.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
         
         motivationTextLabel5.text = PersonalInformations.motivation[4]
-        motivationTextLabelCenterConstraint5.constant += view.bounds.height
-        motivationTextLabel5.transform = CGAffineTransform(scaleX: 2, y: 2)
+        motivationTextLabelCenterConstraint5.constant += view.bounds.height/1.5
+        motivationTextLabel5.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
 
-        maskView.layer.cornerRadius = 40
-        maskView.backgroundColor = .blue
-        contentViewOutlet.mask = maskView
+        //maskView.layer.cornerRadius = 40
+        //maskView.backgroundColor = .blue
+        //contentViewOutlet.mask = maskView
+        
+        self.nextButtonCenterConstraint.constant += self.view.bounds.height
+        self.contentViewOutlet.backgroundColor = UIColor(rgb: 0x263238)
+        self.view.backgroundColor = UIColor(rgb: 0x263238)
+        self.nextButtonOutlet.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        animateSearch()
-        scaleAnimation()
-        textAnimation(onTextLabel: motivationTextLabel1, atConstraint: motivationTextLabelCenterConstraint1, withDuration: 15, startingDelay: 4)
-        textAnimation(onTextLabel: motivationTextLabel2, atConstraint: motivationTextLabelCenterConstraint2, withDuration: 15, startingDelay: 6.5)
-        textAnimation(onTextLabel: motivationTextLabel3, atConstraint: motivationTextLabelCenterConstraint3, withDuration: 15, startingDelay: 9)
-        textAnimation(onTextLabel: motivationTextLabel4, atConstraint: motivationTextLabelCenterConstraint4, withDuration: 15, startingDelay: 11.5)
-        textAnimation(onTextLabel: motivationTextLabel5, atConstraint: motivationTextLabelCenterConstraint5, withDuration: 15, startingDelay: 14)
+        //animateSearch()
+        //scaleAnimation()
+        textAnimation(onTextLabel: motivationTextLabel1, atConstraint: motivationTextLabelCenterConstraint1, withDuration: 12, startingDelay: 0)
+        textAnimation(onTextLabel: motivationTextLabel2, atConstraint: motivationTextLabelCenterConstraint2, withDuration: 12, startingDelay: 2.5)
+        textAnimation(onTextLabel: motivationTextLabel3, atConstraint: motivationTextLabelCenterConstraint3, withDuration: 12, startingDelay: 5)
+        textAnimation(onTextLabel: motivationTextLabel4, atConstraint: motivationTextLabelCenterConstraint4, withDuration: 12, startingDelay: 7.5)
+        textAnimation(onTextLabel: motivationTextLabel5, atConstraint: motivationTextLabelCenterConstraint5, withDuration: 12, startingDelay: 10)
         buttonReturns()
     }
     
@@ -90,36 +95,36 @@ class MotivationPopUpViewController: UIViewController {
     
     
     
-    func animateSearch() {
-        UIView.animate(withDuration: 1.5, delay: 0.3, options: .curveEaseInOut, animations: {
-            self.maskView.transform = CGAffineTransform(translationX: -120/self.scaleFactor, y: 15/self.scaleFactor)
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-
-        UIView.animate(withDuration: 1.5, delay: 1.8, options: .curveEaseInOut, animations: {
-            self.maskView.transform = CGAffineTransform(translationX: 0, y: 33/self.scaleFactor)
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 1.5, delay: 3.3, options: .curveEaseInOut, animations: {
-            self.maskView.transform = CGAffineTransform(translationX: -120/self.scaleFactor, y: 51/self.scaleFactor)
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.3, delay: 4.8, options: .curveLinear, animations: {
-            self.maskView.transform = CGAffineTransform(translationX: -80/self.scaleFactor, y: 90/self.scaleFactor)
-            self.view.layoutIfNeeded()
-            
-        },completion: nil )
-        
-
-    }
+//    func animateSearch() {
+//        UIView.animate(withDuration: 1.5, delay: 0.3, options: .curveEaseInOut, animations: {
+//            self.maskView.transform = CGAffineTransform(translationX: -1200/self.scaleFactor, y: 15/self.scaleFactor)
+//            self.view.layoutIfNeeded()
+//        }, completion: nil)
+//
+//        UIView.animate(withDuration: 1.5, delay: 1.8, options: .curveEaseInOut, animations: {
+//            self.maskView.transform = CGAffineTransform(translationX: 0, y: 33/self.scaleFactor)
+//            self.view.layoutIfNeeded()
+//        }, completion: nil)
+//
+//        UIView.animate(withDuration: 1.5, delay: 3.3, options: .curveEaseInOut, animations: {
+//            self.maskView.transform = CGAffineTransform(translationX: -2200/self.scaleFactor, y: 51/self.scaleFactor)
+//            self.view.layoutIfNeeded()
+//        }, completion: nil)
+//
+//        UIView.animate(withDuration: 0.3, delay: 4.8, options: .curveLinear, animations: {
+//            self.maskView.transform = CGAffineTransform(translationX: -80/self.scaleFactor, y: 90/self.scaleFactor)
+//            self.view.layoutIfNeeded()
+//
+//        },completion: nil )
+//
+//
+//    }
     
     func scaleAnimation() {
-        UIView.animate(withDuration: 0.6, delay: 5.2, options: .curveEaseInOut, animations: {
-            self.maskView.transform = CGAffineTransform(translationX: -80, y: 90).scaledBy(x: self.scaleFactor, y: self.scaleFactor)
-            self.view.layoutIfNeeded()
-        }, completion: nil)
+//        UIView.animate(withDuration: 0.6, delay: 5.2, options: .curveEaseInOut, animations: {
+//            self.maskView.transform = CGAffineTransform(translationX: -80, y: 90).scaledBy(x: self.scaleFactor, y: self.scaleFactor)
+//            self.view.layoutIfNeeded()
+//        }, completion: nil)
         UIView.animate(withDuration: 0.4, delay: 5.4, options: .curveEaseInOut, animations: {
             self.nextButtonOutlet.transform = CGAffineTransform(scaleX: 4, y: 4)
             self.view.layoutIfNeeded()
@@ -131,7 +136,7 @@ class MotivationPopUpViewController: UIViewController {
                 self.nextButtonOutlet.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
             }
         })
-        
+
     }
     
     
@@ -146,7 +151,7 @@ class MotivationPopUpViewController: UIViewController {
     }
     
     func buttonReturns() {
-        UIView.animate(withDuration: 7, delay: 17, options: .curveLinear, animations: {
+        UIView.animate(withDuration: 7, delay: 10, options: .curveLinear, animations: {
             self.nextButtonCenterConstraint.constant -= self.view.bounds.height
             self.view.layoutIfNeeded()
         }, completion: nil)
